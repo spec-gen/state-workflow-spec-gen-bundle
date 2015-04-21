@@ -1,0 +1,51 @@
+{
+    "name": "gmorel/SpecGen-StateWorkflow",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Guillaume MOREL",
+            "email": "guillaume.morel@gmx.com"
+        }
+    ],
+    "type": "library",
+    "autoload":     {
+        "psr-0": {
+            "Gmorel\\SpecGenStateWorkflowBundle": ""
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.6.*",
+        "sensio/distribution-bundle": "~3.0,>=3.0.12",
+        "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0"
+    },
+    "require-dev": {
+        "composer/composer": "1.0.*@dev",
+        "phpunit/phpunit": "~4",
+        "gmorel/state-workflow-bundle": "dev-develop",
+        "gmorel/state-workflow-demo": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/gmorel/StateWorkflowBundle.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/gmorel/StateWorkflowDemo.git"
+        }
+    ],
+    "scripts": {
+    },
+   "target-dir": "Gmorel/SpecGenStateWorkflowBundle",
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
