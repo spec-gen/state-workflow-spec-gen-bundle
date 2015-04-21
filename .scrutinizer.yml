@@ -2,6 +2,18 @@
 # need to install vendors, for example via composer.
 before_commands:
     - composer install --dev
+checks:
+    php:
+        code_rating: true
+        duplication: true
+build:
+    tests:
+        override:
+            -
+                command: 'phpunit --coverage-clover=some-file'
+                coverage:
+                    file: 'some-file'
+                    format: 'php-clover'
 tools:
     php_cs_fixer:
         extensions:

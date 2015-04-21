@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- Bounded Context entry point -->
+        <service id="spec_gen.state_workflow.service" class="SpecGen\StateWorkflowSpecGenBundle\App\SpecificationService" public="true">
+            <argument type="service" id="spec_gen.state_workflow.workflow.container" />
+            <argument type="service" id="spec_gen.state_workflow.cytoscape_specification_representation.generator" />
+            <argument type="service" id="spec_gen.state_workflow.file_system.writer" />
+        </service>
+
+        <!-- CLI -->
+        <service id="spec_gen.state_workflow.workflow.generate_workflow_specifications.cli" class="SpecGen\StateWorkflowSpecGenBundle\UI\Cli\GenerateWorkflowSpecificationsCommand" public="true">
+            <argument type="service" id="spec_gen.state_workflow.service" />
+            <tag name="console.command" />
+        </service>
+
+        <service id="spec_gen.state_workflow.cytoscape_specification_representation.generator" class="SpecGen\StateWorkflowSpecGenBundle\Infra\CytoscapeSpecificationRepresentationGenerator" public="false"/>
+        <service id="spec_gen.state_workflow.file_system.writer" class="SpecGen\StateWorkflowSpecGenBundle\Infra\FileSystemSpecificationWriter" public="false"/>
+
+        <service id="spec_gen.state_workflow.workflow.container" class="SpecGen\StateWorkflowSpecGenBundle\Domain\WorkflowContainer" public="false">
+        </service>
+    </services>
+</container>

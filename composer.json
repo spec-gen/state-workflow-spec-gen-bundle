@@ -1,5 +1,5 @@
 {
-    "name": "gmorel/SpecGen-StateWorkflow",
+    "name": "spec-gen/state-workflow-spec-gen-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -9,8 +9,8 @@
     ],
     "type": "library",
     "autoload":     {
-        "psr-0": {
-            "Gmorel\\SpecGenStateWorkflowBundle": ""
+        "psr-4": {
+            "SpecGen\\StateWorkflowSpecGenBundle\\": ""
         }
     },
     "require": {
@@ -23,22 +23,10 @@
     "require-dev": {
         "composer/composer": "1.0.*@dev",
         "phpunit/phpunit": "~4",
-        "gmorel/state-workflow-bundle": "dev-develop",
-        "gmorel/state-workflow-demo": "dev-master"
+        "gmorel/state-workflow-bundle": "dev-master"
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/gmorel/StateWorkflowBundle.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/gmorel/StateWorkflowDemo.git"
-        }
-    ],
     "scripts": {
     },
-   "target-dir": "Gmorel/SpecGenStateWorkflowBundle",
     "minimum-stability": "dev",
     "config": {
         "bin-dir": "bin"
