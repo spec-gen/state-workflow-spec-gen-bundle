@@ -8,6 +8,7 @@
         }
     ],
     "type": "library",
+    "description": "Specification generator for StateWorkflowBundle: https://github.com/gmorel/StateWorkflowBundle",
     "autoload":     {
         "psr-4": {
             "SpecGen\\StateWorkflowSpecGenBundle\\": ""
@@ -15,7 +16,7 @@
     },
     "require": {
         "php": ">=5.3.3",
-        "symfony/symfony": "2.6.*",
+        "symfony/symfony": "~2.7",
         "sensio/distribution-bundle": "~3.0,>=3.0.12",
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0"
@@ -23,7 +24,7 @@
     "require-dev": {
         "composer/composer": "1.0.*@dev",
         "phpunit/phpunit": "~4",
-        "gmorel/state-workflow-bundle": "dev-master"
+        "gmorel/state-workflow-bundle": "~1.0"
     },
     "scripts": {
     },
